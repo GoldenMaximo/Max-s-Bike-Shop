@@ -10,7 +10,7 @@
 
 ## Usage example
 
-This is a functional dummy e-commerce to buy and sell firearms. Create an account, list new guns, buy what's avaliable.
+This is a functional dummy e-commerce to buy and sell bicycles. Create an account, list new bikes, buy what's avaliable.
 
 ## Built With
 
@@ -133,7 +133,7 @@ Gustavo Máximo – gfmaximo97@gmail.com
 
 Thanks to [Maximilian Schwarzmüller](https://twitter.com/maxedapps?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor) over @ [Academind](https://academind.com/) for helping me create this project.
 
-Logo made with Gimp. The silhouette is a CZ Shadow 2.
+Logo made with Gimp.
 
 ## Contributing
 

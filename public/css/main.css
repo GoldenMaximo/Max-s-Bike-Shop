@@ -324,3 +324,8 @@ form {
     margin: 0 auto;
     padding: 2rem;
 }
+
+.product__detail_description {
+    width: 50vw;
+    margin: 0 auto;
+}

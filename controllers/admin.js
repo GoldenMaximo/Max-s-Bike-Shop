@@ -15,7 +15,7 @@ exports.getAddProduct = (req, res, next) => {
 };
 
 exports.postAddProduct = (req, res, next) => {
-    const { title, price, description, caliber, magCapacity, barrelLength, action, weight } = req.body;
+    const { title, price, description, weight } = req.body;
     const errors = validationResult(req);
     const image = req.file;
 
@@ -29,10 +29,6 @@ exports.postAddProduct = (req, res, next) => {
                 title,
                 price,
                 description,
-                caliber,
-                magCapacity,
-                barrelLength,
-                action,
                 weight
             },
             errorMessage: (!errors.isEmpty() ? errors.array()[0].msg : 'Please attach an image in one of the valid formats (.png, .jpg or .jpeg)'),
@@ -42,7 +38,7 @@ exports.postAddProduct = (req, res, next) => {
 
     const imageUrl = image.path;
 
-    new Product({ title, price, description, imageUrl, caliber, magCapacity, barrelLength, action, weight, userId: req.user }).save().then(() => {
+    new Product({ title, price, description, imageUrl, weight, userId: req.user }).save().then(() => {
         console.log('Created Product');
         res.redirect('/admin/products');
     }).catch(err => {
@@ -79,7 +75,7 @@ exports.getEditProduct = (req, res, next) => {
 };
 
 exports.postEditProduct = (req, res, next) => {
-    const { productId, title, price, description, caliber, magCapacity, barrelLength, action, weight } = req.body;
+    const { productId, title, price, description, weight } = req.body;
     const errors = validationResult(req);
 
     const image = req.file;
@@ -94,10 +90,6 @@ exports.postEditProduct = (req, res, next) => {
                 title,
                 price,
                 description,
-                caliber,
-                magCapacity,
-                barrelLength,
-                action,
                 weight,
                 _id: productId
             },

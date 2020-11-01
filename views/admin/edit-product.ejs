@@ -33,23 +33,7 @@
                 <textarea class="<%= validationErrors.find(e => e.param === 'description') ? 'invalid' : '' %>" name="description" id="description" rows="5"><% if (editing || hasError) { %><%=product.description%><% } %></textarea>
             </div>
             <div class="form-control">
-                <label for="caliber">Caliber</label>
-                <input class="<%= validationErrors.find(e => e.param === 'caliber') ? 'invalid' : '' %>" type="text" name="caliber" id="caliber" value="<% if (editing || hasError) { %><%=product.caliber%><% } %>">
-            </div>
-            <div class="form-control">
-                <label for="magCapacity">Magazine Capacity</label>
-                <input class="<%= validationErrors.find(e => e.param === 'magCapacity') ? 'invalid' : '' %>" type="number" name="magCapacity" id="caliber" value="<% if (editing || hasError) { %><%=product.magCapacity%><% } %>">
-            </div>
-            <div class="form-control">
-                <label for="barrelLength">Barrel Length</label>
-                <input class="<%= validationErrors.find(e => e.param === 'barrelLength') ? 'invalid' : '' %>" type="text" name="barrelLength" id="barrelLength" value="<% if (editing || hasError) { %><%=product.barrelLength%><% } %>">
-            </div>
-            <div class="form-control">
-                <label for="action">Action Type / System</label>
-                <input class="<%= validationErrors.find(e => e.param === 'action') ? 'invalid' : '' %>" type="text" name="action" id="action" value="<% if (editing || hasError) { %><%=product.action%><% } %>">
-            </div>
-            <div class="form-control">
-                <label for="weight">Dry Weight</label>
+                <label for="weight">Weight</label>
                 <input class="<%= validationErrors.find(e => e.param === 'weight') ? 'invalid' : '' %>" type="text" name="weight" id="weight" value="<% if (editing || hasError) { %><%=product.weight%><% } %>">
             </div>
             <% if (editing) { %>
